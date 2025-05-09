@@ -4,13 +4,12 @@ A mini contact manager project in Python that demonstrates saving and loading co
 
 📁 Project Structure
 contact_manager/
-│
-├── contact_manager.py     # Main script
-├── contacts.txt           # Text file storage
-├── contacts.csv           # CSV file storage
-├── contacts.json          # JSON file storage
-├── contacts.xlsx          # Excel file storage
-└── contacts.db            # SQLite database
+
+*contact_manager.py     # Main script
+*contacts.txt           # Text file storage
+*contacts.csv           # CSV file storage
+* contacts.json          # JSON file storage * contacts.xlsx          # Excel file storage
+*contacts.db            # SQLite database
  💡 Features
 - Save contacts to:
   - 📄 `.txt` – Plain text file (comma-separated)
