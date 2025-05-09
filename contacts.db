@@ -1,0 +1,16 @@
+def save_to_sqlite():
+    conn = sqlite3.connect("contacts.db")
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS contacts (
+            id INTEGER PRIMARY KEY,
+            name TEXT,
+            phone TEXT,
+            email TEXT
+        )
+    ''')
+    for contact in contacts:
+        cursor.execute("INSERT INTO contacts (name, phone, email) VALUES (?, ?, ?)",
+                       (contact["name"], contact["phone"], contact["email"]))
+    conn.commit()
+    conn.close()

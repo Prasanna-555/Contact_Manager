@@ -1,0 +1,8 @@
+def save_to_excel():
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Contacts"
+    ws.append(["Name", "Phone", "Email"])
+    for contact in contacts:
+        ws.append([contact["name"], contact["phone"], contact["email"]])
+    wb.save("contacts.xlsx")

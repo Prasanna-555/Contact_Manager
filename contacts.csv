@@ -1,0 +1,5 @@
+def save_to_csv():
+    with open("contacts.csv", "w", newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=["name", "phone", "email"])
+        writer.writeheader()
+        writer.writerows(contacts)
